@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/state_park"
+            android:icon="@drawable/ic_state_park"
+            android:title="Состояние автопарка" />
+        <item
+            android:id="@+id/event"
+            android:icon="@drawable/ic_event"
+            android:title="События" />
+        <item
+            android:id="@+id/task"
+            android:icon="@drawable/ic_task"
+            android:title="Задания" />
+        <item
+            android:id="@+id/fuel"
+            android:icon="@drawable/ic_fuel"
+            android:title="Топливо" />
+        <item
+            android:id="@+id/employees"
+            android:icon="@drawable/ic_employees"
+            android:title="Сотрудники" />
+    </group>
+
+
+</menu>

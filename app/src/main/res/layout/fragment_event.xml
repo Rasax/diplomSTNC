@@ -1,0 +1,306 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ru.mobileapp.FragmentEvent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="События"
+        android:id="@+id/textView6"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Топ-3 событий"
+        android:id="@+id/textView"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="40dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="197dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_weight="0.04"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Всего:  "
+            android:id="@+id/text_all"
+            android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp"
+            android:layout_alignTop="@+id/text_cout_st"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <org.eazegraph.lib.charts.PieChart
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/piechart"
+            android:layout_width="148dp"
+            android:layout_height="177dp"
+            android:padding="0dp"
+            app:egLegendTextSize="10sp"
+            app:egUsePieRotation="true"
+            app:egValueTextSize="36sp"
+            android:layout_weight="0.90"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="164dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|bottom"
+            android:id="@+id/linearLayout2"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/piechart"
+            android:layout_toEndOf="@+id/piechart"
+            android:layout_alignTop="@+id/piechart">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="@drawable/red_circle"
+                    android:id="@+id/imageView3"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/idElegendEvent1"
+                    android:layout_marginLeft="15dp"
+                    android:text="Отсутствие связи"
+                    android:layout_marginRight="15dp"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="@drawable/yellow_circle"
+                    android:id="@+id/imageView2"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/event_out_route"
+                    android:id="@+id/idElegendEvent2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="@drawable/greeb_cirle"
+                    android:id="@+id/imageView4"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/event_speed_reduction"
+                    android:id="@+id/idElegendEvent3"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="28"
+            android:id="@+id/text_cout_st"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/text_all"
+            android:layout_toEndOf="@+id/text_all" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Топ-3 нарушителей"
+        android:id="@+id/textView4"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/piechart"
+        android:layout_toRightOf="@+id/text_all"
+        android:layout_toEndOf="@+id/text_all"
+        android:layout_gravity="right"
+        android:layout_marginRight="40dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/dialog_holo_light_frame">
+
+        <org.eazegraph.lib.charts.PieChart
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/piechart1"
+            android:layout_width="118dp"
+            android:layout_height="184dp"
+            android:padding="8dp"
+            app:egLegendTextSize="10sp"
+            app:egUsePieRotation="true"
+            app:egValueTextSize="36sp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|bottom">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="@drawable/red_circle"
+                    android:id="@+id/imageView7"
+                    android:layout_marginTop="15dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView8"
+                    android:src="@drawable/ts_auto_ic"
+                    android:layout_marginLeft="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="А 013 АА 64"
+                        android:id="@+id/idElegendObject1"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Сергей Петров"
+                        android:id="@+id/idElegendObject1Name"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="@drawable/yellow_circle"
+                    android:id="@+id/imageView5"
+                    android:layout_marginTop="15dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView9"
+                    android:src="@drawable/ts_truck_ic"
+                    android:layout_marginLeft="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="А 012 АА 64"
+                    android:id="@+id/idElegendObject2"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Иван Кузнецов"
+                    android:id="@+id/idElegendObject2Name"
+                    android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="@drawable/greeb_cirle"
+                    android:id="@+id/imageView6"
+                    android:layout_marginTop="15dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView10"
+                    android:src="@drawable/ts_big_truck_ic"
+                    android:layout_marginLeft="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="А 014 АА 64"
+                    android:id="@+id/idElegendObject3"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Олег Иванов"
+                    android:id="@+id/idElegendObject3Name"
+                    android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

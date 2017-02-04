@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MobileApp</string>
+    <string name="activity_main">SmartTrans NaviCore</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_settings_first">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_done">Выполнено</string>
+    <string name="task_create">Создано</string>
+    <string name="task_in_work">В работе</string>
+    <string name="task_not_done">Не выполнено</string>
+    <string name="authorization_loading">Загрузка...</string>
+    <string name="authorization_invalid_data">Неверные данные</string>
+    <string name="event_no_connection">Отсутствие связи</string>
+    <string name="event_out_route">Выход за пределы маршрута</string>
+    <string name="event_speed_reduction">Занижение скорости</string>
+    <string name="state_free">Свободно</string>
+    <string name="state_not_available">Занято</string>
+    <string name="state_repairs">В ремонте</string>
+    <string name="title_itememploees_list">Items</string>
+    <string name="title_itememploees_detail">ItemEmploees Detail</string>
+    <string name="title_itememployees_list">Items</string>
+    <string name="title_itememployees_detail">ItemEmployees Detail</string>
+    <string name="exit">Выход</string>
+    <string name="admin">Администрирование</string>
+
+    <string-array name="employees">
+        <item>Дмитрий Кравцов</item>
+        <item>Алексей Любимов</item>
+        <item>Алексей Рубин</item>
+        <item>Олег Павлов</item>
+        <item>Андрей Васильев</item>
+        <item>Артем Хохлов</item>
+        <item>Иван Петров</item>
+        <item>Сергей Коваленко</item>
+        <item>Владимир Кудинов</item>
+        <item>Андрей Маринин</item>
+        <item>Юрий Костенко</item>
+        <item>Егор Малышев</item>
+    </string-array>
+</resources>
