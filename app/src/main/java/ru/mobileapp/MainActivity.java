@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity
     FragmentFuel ffuel;
     FragmentEvent fevent;
     FragmentEmployees femloyees;
+    FragmentMap fmap;
 
     FragmentAdmin fadmin;
 
@@ -75,13 +76,14 @@ public class MainActivity extends AppCompatActivity
         fevent = new FragmentEvent();
         femloyees = new FragmentEmployees();
         fadmin = new FragmentAdmin();
+        fmap = new FragmentMap();
 
         fsink = new FuelSInk();
         fAll = new FuelAll();
         fConsumption = new FuelConsumption();
 
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
-        ftrans.replace(R.id.container, fstate_park);
+        ftrans.replace(R.id.container, fmap);
         ftrans.commit();
     }
 
@@ -134,9 +136,10 @@ public class MainActivity extends AppCompatActivity
             ftrans.replace(R.id.container, ftask);
         } else if(id == R.id.employees){
             ftrans.replace(R.id.container, femloyees);
-        }
-        else if (id == R.id.fuel) {
+        } else if (id == R.id.fuel) {
             ftrans.replace(R.id.container, ffuel);
+        } else if (id == R.id.mapView) {
+            ftrans.replace(R.id.container, fmap);
         }
         ftrans.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -188,6 +191,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.fuel_main:
                 ftrans.replace(R.id.container, ffuel);
                 break;
+
+
         }
         ftrans.commit();
     }

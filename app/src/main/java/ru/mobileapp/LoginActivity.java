@@ -22,18 +22,18 @@ public class LoginActivity extends Activity {
         login = (EditText) findViewById(R.id.editLogin);
         password = (EditText) findViewById(R.id.editPassword);
 
-        singIn.setOnClickListener(new View.OnClickListener() {
+       singIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (login.getText().toString().equals(LOGIN_VALUE) &&
+               /* if (login.getText().toString().equals(LOGIN_VALUE) &&
                         password.getText().toString().equals(PASSWORD_VALUE)) {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.authorization_loading), Toast.LENGTH_SHORT).show();
-
+                       */
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
-                } else {
+               /* } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.authorization_invalid_data), Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
         });
     }

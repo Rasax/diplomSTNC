@@ -22,6 +22,10 @@
             android:id="@+id/employees"
             android:icon="@drawable/ic_employees"
             android:title="Сотрудники" />
+        <item
+            android:id="@+id/map"
+            android:icon="@drawable/ic_employees"
+            android:title="Карта" />
     </group>
 
 

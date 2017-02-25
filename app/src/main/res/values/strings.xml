@@ -39,4 +39,5 @@
         <item>Юрий Костенко</item>
         <item>Егор Малышев</item>
     </string-array>
+    <string name="title_activity_maps">Карта</string>
 </resources>
